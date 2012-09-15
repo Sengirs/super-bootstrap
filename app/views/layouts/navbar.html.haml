@@ -1,0 +1,39 @@
+.navbar.navbar-fixed-top.navbar-inverse 
+  .navbar-inner
+    .container
+      =link_to "Rails App", root_path, class: "brand"
+      .nav-collapse
+        %ul.nav
+          -#if user_signed_in?
+        
+        %ul.nav.pull-right
+          -if admin_user_signed_in?
+            %li=link_to i(:lock), admin_users_path
+          -if user_signed_in?
+            %li=link_to "#{current_user.name}", edit_user_registration_path
+            %li.divider-vertical
+            %li.dropdown
+              =link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do
+                =i(:cog, true)
+                =t :settings
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  =link_to edit_user_registration_path do
+                    =i :wrench
+                    =t :my_account
+                %li
+                  =link_to destroy_user_session_path, :method => :delete do
+                    =i :off
+                    =t :log_out
+          -else
+            %li
+              =link_to sign_in_path do
+                =i(:user, true)
+                =t :sign_in
+            %li
+              =link_to sign_up_path, :style => "font-weight: bold;" do
+                =i(:pencil, true)
+                =t :sign_up
+      
+  
