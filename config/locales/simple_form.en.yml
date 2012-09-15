@@ -10,6 +10,13 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    forgot_your_password: "Forgot your password ?"
+    send_reset_password: "Send me reset password instructions"
+    leave_blank_password: "leave it blank if you don't want to change it"
+    current_password: "we need your current password to confirm your changes"
+    change_your_password: "Change your password"
+    change_my_password: "Change my password"
+    
     # Labels and hints examples
     # labels:
     #   defaults:
