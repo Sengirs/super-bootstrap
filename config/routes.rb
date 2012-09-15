@@ -11,7 +11,7 @@ SuperBootstrap::Application.routes.draw do
     get "sign_out", :to => "devise/sessions#destroy"
   end
   
-  root :to => "users#edit"
+  root :to => "devise/registrations#edit"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
