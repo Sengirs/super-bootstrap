@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: super_bootstrap_development
+  pool: 5
+  timeout: 5000
+  username: user0
+  password: 
+
+test: &test
+  adapter: postgresql
+  database: super_bootstrap_test
+  pool: 5
+  timeout: 5000
+  username: user0
+  password:
